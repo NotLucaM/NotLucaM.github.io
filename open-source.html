@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css"/>
+    <title>Seminar</title>
+</head>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<body>
+<div class="h-screen flex flex-col justify-center bg-cover" style="background-image: url(mountain.jpg)">
+    <div class="text-8xl font-extrabold flex justify-center">
+        <span class="bg-clip-text text-transparent bg-gradient-to-r from-sky-500 to-blue-500 backdrop-blur-sm">
+            Open Source Software
+        </span>
+    </div>
+    <div class="text-4xl font-bold flex justify-center">
+        <span class="bg-clip-text text-transparent bg-gradient-to-r from-sky-500 to-blue-500 backdrop-blur-sm">
+            Funding problems in software industry
+        </span>
+    </div>
+</div>
+<div class="snap-y snap-mandatory scroll-smooth">
+    <div class="section">
+        <h3 class="section-header">
+            Log4Shell
+        </h3>
+        <p class="main-text">
+            In late 2021, the Log4J zero-day vulnerability, Log4Shell was revealed. Effecting countless programs,
+            Log4Shell
+            allowed hackers to execute malicious code remotely. The disastrous effects of Log4Shell reveals the
+            disastrous
+            effects of issues in dependencies.
+        </p>
+    </div>
+
+    <div class="section">
+        <h3 class="section-header">
+            Why support matters
+        </h3>
+        <p class="main-text">
+            According to Eric Raymond's essay The Cathedral and the Bazaar, Linus&#39;s law states
+        </p>
+        <blockquote
+                class="relative p-4 text-xl italic border-l-4 bg-neutral-100 text-neutral-600 border-neutral-500 quote">
+            <p>
+                given enough eyeballs, all bugs are shallow
+            </p>
+            <cite>
+                <p class="text-sm">
+                    Eric Raymond
+                </p>
+            </cite>
+        </blockquote>
+        <p class="main-text">
+            More support means more bugs such as Log4Shell can be found and patched quicker or detected before entering
+            a
+            release. This is also important because of how much code is outdated and can contain vulnrabilities.
+        </p>
+
+        <div class="flex flex-shrink justify-center">
+            <figure class="max-w-screen-md">
+                <canvas id="myChart" class="max-h-96"></canvas>
+                <label class="text-slate-800 ml-2 mt-2"> 85% of projects analyzed by Synopsys in 2022 contained open
+                    source code more than
+                    four years out-of-date </label>
+            </figure>
+        </div>
+    </div>
+    <div class="section">
+        <h3 class="section-header">
+            Google&#39;s Open Source Maintenance Crew
+        </h3>
+        <p class="main-text">
+            Due to Log4Shell and other similar vulnerabilities along with a push from the White House to improve
+            software
+            security, Google recently created its Open Source Maintenance Crew which attempts to protect the security of
+            upstream projects and critical open source dependencies.
+        </p>
+        <h4 class="text-xl font-medium text-slate-800 bg-indigo-100">
+            This is not enough
+        </h4>
+        <p class="main-text">
+            Despite gaining more support from big corporations, smaller organizations must also do their part to help
+            fix
+            issues
+            in the open source projects they utilize. Given open source code’s massive economic benefits and usage, more
+            returned support is expected.
+        </p>
+    </div>
+    <div class="section">
+        <h3 class="section-header">
+            Promoting GPL/LGPL
+        </h3>
+        <p class="main-text">
+            Due to the popularly used MIT and Apache licenses, companies which use an open source product are not
+            required
+            to
+            give back contributions to the code. If more projects used GPL or LGPL this problem would naturally fix
+            itself.
+            This
+            is not feasible however, as many projects do not want to or can not change to a copyleft license.
+        </p>
+    </div>
+    <div class="section">
+        <h3 class="section-header">
+            Government intervention
+        </h3>
+        <p class="main-text">
+            Although the government has acted to aid this issue, these are not enough and too slow. The government ought
+            to
+            instead provide incentives for open source developers and companies which contribute back to open source
+            projects.
+        </p>
+    </div>
+    <div class="section">
+        <h2 class="section-header">
+            AP Seminar Reflection
+        </h2>
+        <p class="main-text">
+            For me, AP Seminar was an amazing opportunity to learn how to find and organize many different academic
+            papers.
+            Where other classes just give sources with an obvious connection, AP Seminar presented the unique challenge
+            of
+            having access to the hundreds of thousands of academic sources available. Learning how to find as much
+            knowledge
+            in a specific domain and how to sort it into a memorable format was something no other class taught and
+            extremely useful when I conduct my own personal research.
+        </p>
+        <p class="main-text">
+            With my research on the benefits of open source, I plan on encouraging others to utilize open source
+            software
+            and I hope to be able to contribute myself to open source projects I use. However, in order to do this, I
+            need
+            to learn far more about operating systems and low level programming.
+        </p>
+        <p class="main-text">
+            Outside of AP Seminar, I try my best to learn about AI and operating systems. Using my experience of reading
+            academic papers from AP Seminar, I try to read and stay up to date with the latest developments in
+            artificial
+            intelligence. At the moment, I am researching the methods industry leaders such as DeepMind use
+            reinforcement
+            learning. Furthermore, as a Linux user, I hope to one day be able to contribute myself to the kernel which I
+            use.
+        </p>
+        <p class="main-text">
+            After high school I plan on majoring in computer science. While I have not decided which part of computer
+            science I want to explore, I am highly interested in computer vision and artificial intelligence.
+        </p>
+    </div>
+</div>
+
+<script>
+    const labels = [
+        '% of projects containing open source software more than four years out of date',
+    ];
+
+    const data = {
+        labels: labels,
+        datasets: [{
+            backgroundColor: [
+                'rgb(255, 99, 132)',
+                'rgb(200, 200, 200)',
+            ],
+            borderColor: [
+                'rgb(255, 99, 132)',
+                'rgb(255, 255, 255)',
+            ],
+            data: [60, 40],
+        }]
+    };
+
+    const config = {
+        type: 'doughnut',
+        data: data,
+        options: {
+            plugins: {
+                legend: {
+                    display: false
+                }
+            }
+        }
+    };
+    console.log(document.getElementById("myChart"))
+    const myChart = new Chart(
+        document.getElementById('myChart'),
+        config
+    );
+</script>
+</body>
+</html>
+
