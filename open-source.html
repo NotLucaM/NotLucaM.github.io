@@ -21,7 +21,7 @@
 </div>
 
 <div class="section mt-32">
-    <h3 class="section-header">
+    <h3 class="section-header my-4">
         Introduction
     </h3>
     <iframe class="aspect-video max-w-screen-lg w-full" src="https://www.youtube.com/embed/Ki5CEMwllTQ" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -182,20 +182,31 @@
     </h4>
 
     <div class="grid grid-cols-2 gap-4 items-start w-full max-w-screen-lg">
-        <div class="paper-box">
-            <a href="papers/irr1.pdf"> IRR 1 </a>
-        </div>
-        <div class="paper-box">
-            <a href="papers/iwa1.pdf"> IWA 1 </a>
-        </div>
-        <div class="paper-box">
-            <a href="papers/irr2.pdf"> IRR 2 </a>
-        </div>
-        <div class="paper-box">
-            <a href="papers/iwa2.pdf"> IWA 2 </a>
-        </div>
+
+        <a href="papers/irr1.pdf">
+            <button class="paper-box">
+                Personal Genetic Ancestry Testing: Concerns Regarding Accuracy
+            </button>
+        </a>
+        <a href="papers/iwa1.pdf">
+            <button class="paper-box">
+                Concerns Over Daylight Savings: A Utilitarian Analysis
+            </button>
+        </a>
+        <a href="papers/irr2.pdf">
+            <button class="paper-box">
+                Bias in Facial Recognition: Causes and Effects in Policing
+            </button>
+        </a>
+        <a href="papers/iwa2.pdf" class="h-full flex flex-col justify-center">
+            <button class="paper-box">
+                Open-Source Projects: A Need for Funding
+            </button>
+        </a>
     </div>
 </div>
+
+<br>
 
 <script>
     const labels = [
@@ -206,11 +217,11 @@
         labels: labels,
         datasets: [{
             backgroundColor: [
-                'rgb(255, 99, 132)',
+                'rgb(59 130 246 / 0.5)',
                 'rgb(200, 200, 200)',
             ],
             borderColor: [
-                'rgb(255, 99, 132)',
+                'rgb(59 130 246 / 0.5)',
                 'rgb(255, 255, 255)',
             ],
             data: [60, 40],
