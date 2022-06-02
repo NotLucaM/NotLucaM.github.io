@@ -24,7 +24,7 @@
     <h3 class="section-header">
         Introduction
     </h3>
-    <iframe class="max-w-screen-lg w-full aspect-video mt-4" src="https://www.youtube.com/embed?v=Ki5CEMwllTQ" allowfullscreen></iframe>
+    <iframe class="aspect-video max-w-screen-lg w-full" src="https://www.youtube.com/embed/Ki5CEMwllTQ" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 <div class="section">
@@ -53,7 +53,7 @@
 
     <div class="flex flex-shrink justify-center">
         <figure class="max-w-screen-md">
-            <canvas id="myChart" class="max-h-96"></canvas>
+            <canvas id="myChart" class="max-h-96 p-4"></canvas>
             <label class="text-slate-800 ml-2 mt-2"> 85% of projects analyzed by Synopsys in 2022 contained open
                 source code more than
                 four years out-of-date </label>
@@ -70,7 +70,7 @@
         security, Google recently created its Open Source Maintenance Crew which attempts to protect the security of
         upstream projects and critical open source dependencies.
     </p>
-    <h4 class="text-xl font-medium text-slate-800 bg-indigo-100">
+    <h4 class="text-3xl text-slate-800 mt-4 font-semibold">
         This is not enough
     </h4>
     <p class="main-text">
@@ -81,30 +81,40 @@
         returned support is expected.
     </p>
 </div>
-<div class="section">
+
+<div class="flex justify-center mt-32 mb-6">
     <h3 class="section-header">
-        Promoting GPL/LGPL
+        Solutions
     </h3>
-    <p class="main-text">
-        Due to the popularly used MIT and Apache licenses, companies which use an open source product are not
-        required
-        to
-        give back contributions to the code. If more projects used GPL or LGPL this problem would naturally fix
-        itself.
-        This
-        is not feasible however, as many projects do not want to or can not change to a copyleft license.
-    </p>
 </div>
-<div class="section">
-    <h3 class="section-header">
-        Government intervention
-    </h3>
-    <p class="main-text">
-        Although the government has acted to aid this issue, these are not enough and too slow. The government ought
-        to
-        instead provide incentives for open source developers and companies which contribute back to open source
-        projects.
-    </p>
+<div class="flex justify-center">
+    <div class="grid grid-cols-2 max-w-screen-lg items-start">
+        <div class="bg-gray-800 h-full mr-4">
+            <h3 class="section-header text-center text-white mt-4">
+                Promoting GPL/LGPL
+            </h3>
+            <p class="main-text text-white mx-4 my-4">
+                Due to the popularly used MIT and Apache licenses, companies which use an open source product are not
+                required
+                to
+                give back contributions to the code. If more projects used GPL or LGPL this problem would naturally fix
+                itself.
+                This
+                is not feasible however, as many projects do not want to or can not change to a copyleft license.
+            </p>
+        </div>
+        <div class="bg-gray-800 h-full ml-4">
+            <h3 class="section-header text-white text-center mt-4">
+                Government intervention
+            </h3>
+            <p class="main-text text-white mx-4 my-4">
+                Although the government has acted to aid this issue, these are not enough and too slow. The government ought
+                to
+                instead provide incentives for open source developers and companies which contribute back to open source
+                projects.
+            </p>
+        </div>
+    </div>
 </div>
 <div class="section">
     <h2 class="section-header">
